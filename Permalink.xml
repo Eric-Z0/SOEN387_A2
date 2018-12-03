@@ -1,0 +1,91 @@
+<permalinks>
+    <Permalink>
+        <pattern>Poke/Player/Register</pattern>
+        <dispatcher>org.app.dispatcher.Register</dispatcher>
+    </Permalink>
+    <Permalink>
+        <pattern>Poke/Player/Login</pattern>
+        <dispatcher>org.app.dispatcher.Login</dispatcher>
+    </Permalink>
+    <Permalink>
+        <pattern>Poke/Player/Logout</pattern>
+        <dispatcher>org.app.dispatcher.Logout</dispatcher>
+    </Permalink>
+    <Permalink>
+        <pattern>Poke/Deck</pattern>
+        <dispatcher>org.app.dispatcher.ManageDeck</dispatcher>
+    </Permalink>
+    <Permalink>
+        <pattern>Poke/Deck</pattern>
+        <dispatcher>org.app.dispatcher.ManageDeck</dispatcher>
+    </Permalink>
+    <Permalink>
+        <pattern>Poke/Deck/(\d+)</pattern>
+        <dispatcher>org.app.dispatcher.ViewDeck</dispatcher>
+        <attribute name="deck" />
+    </Permalink>
+    <Permalink>
+        <pattern>Poke/Player</pattern>
+        <dispatcher>org.app.dispatcher.ListPlayer</dispatcher>
+    </Permalink>
+    <Permalink>
+        <pattern>Poke/Player/(\d+)/Challenge</pattern>
+        <dispatcher>org.app.dispatcher.ChallengePlayer</dispatcher>
+        <attribute name="player" />
+    </Permalink>
+    <Permalink>
+        <pattern>Poke/Challenge</pattern>
+        <dispatcher>org.app.dispatcher.ListChallenge</dispatcher>
+    </Permalink>
+    <Permalink>
+        <pattern>Poke/Challenge/(\d+)/Withdraw</pattern>
+        <dispatcher>org.app.dispatcher.WithdrawChallenge</dispatcher>
+        <attribute name="challenge" />
+    </Permalink>
+    <Permalink>
+        <pattern>Poke/Challenge/(\d+)/Refuse</pattern>
+        <dispatcher>org.app.dispatcher.RefuseChallenge</dispatcher>
+        <attribute name="challenge" />
+    </Permalink>
+    <Permalink>
+        <pattern>Poke/Challenge/(\d+)/Accept</pattern>
+        <dispatcher>org.app.dispatcher.AcceptChallenge</dispatcher>
+        <attribute name="challenge" />
+    </Permalink>
+    <Permalink>
+        <pattern>Poke/Game</pattern>
+        <dispatcher>org.app.dispatcher.ListGame</dispatcher>
+    </Permalink>
+    <Permalink>
+        <pattern>Poke/Game/(\d+)</pattern>
+        <dispatcher>org.app.dispatcher.ViewBoard</dispatcher>
+        <attribute name="game" />
+    </Permalink>
+    <Permalink>
+        <pattern>Poke/Game/(\d+)/Hand</pattern>
+        <dispatcher>org.app.dispatcher.ViewHand</dispatcher>
+        <attribute name="game" />
+    </Permalink>
+    <Permalink>
+        <pattern>Poke/Game/(\d+)/Player/(\d+)/Discard</pattern>
+        <dispatcher>org.app.dispatcher.ViewDiscardedPile</dispatcher>
+        <attribute name="game" />
+        <attribute name="player" />
+    </Permalink>
+    <Permalink>
+        <pattern>Poke/Game/(\d+)/Hand/(\d+)/Play</pattern>
+        <dispatcher>org.app.dispatcher.PlayOptionAnalysis</dispatcher>
+        <attribute name="game" />
+        <attribute name="card" />
+    </Permalink>
+    <Permalink>
+        <pattern>Poke/Game/(\d+)/EndTurn</pattern>
+        <dispatcher>org.app.dispatcher.EndTurn</dispatcher>
+        <attribute name="game" />
+    </Permalink>
+    <Permalink>
+        <pattern>Poke/Game/(\d+)/Retire</pattern>
+        <dispatcher>org.app.dispatcher.Retire</dispatcher>
+        <attribute name="game" />
+    </Permalink>
+</permalinks>
